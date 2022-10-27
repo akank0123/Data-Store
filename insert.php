@@ -22,13 +22,16 @@
         }
          
         // Taking all 4 values from the form data(input)
-        $city =  $_POST['city'];
-        $datajob = $_POST['datajob'];
-        $experience =  $_POST['experience'];
-        $phone = $_POST['phone'];
-         
-        // Performing insert query execution
-        // here our table name is college
+
+        if(isset($_POST['submit'])){
+            $city =  $_POST['city'];
+            $datajob = $_POST['datajob'];
+            $experience =  $_POST['experience'];
+            $phone = $_POST['phone'];
+            
+            // Performing insert query execution
+            // here our table name is college
+        }
         $sql = "INSERT INTO data VALUES ('$id','$city',
             '$datajob','$experience','$phone')";
          
@@ -49,5 +52,4 @@
         ?>
     </center>
 </body>
- 
 </html>
